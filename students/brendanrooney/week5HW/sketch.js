@@ -28,7 +28,7 @@ var Mover = function(){
   this.position = createVector(random(width), random(height));
   this.velocity = createVector();
   this.acceleration = createVector();
-  this.topspeed = 1.5;
+  this.topspeed = 3;
 
   this.update = function(){
     var mouse = createVector(mouseX, mouseY);
@@ -36,7 +36,7 @@ var Mover = function(){
     if (mouseIsPressed == true){
     this.acceleration.setMag(-2);
     } else {
-    this.acceleration.setMag(random(0.01));
+    this.acceleration.setMag(random(0.1));
     }
 
     this.velocity.limit(this.topspeed);
